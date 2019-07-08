@@ -1,6 +1,6 @@
 {
     "title": "Amazon Cognito Sync",
-    "description": "<fullname>Amazon Cognito Sync</fullname> <p>Amazon Cognito Sync provides an AWS service and client library that enable cross-device syncing of application-related user data. High-level client libraries are available for both iOS and Android. You can use these libraries to persist data locally so that it's available even if the device is offline. Developer credentials don't need to be stored on the mobile device to access the service. You can use Amazon Cognito to obtain a normalized user ID and credentials. User data is persisted in a dataset that can store up to 1 MB of key-value pairs, and you can have up to 20 datasets per user identity.</p> <p>With Amazon Cognito Sync, the data stored for each identity is accessible only to credentials assigned to that identity. In order to use the Cognito Sync service, you need to make API calls using credentials retrieved with <a href=\"http://docs.aws.amazon.com/cognitoidentity/latest/APIReference/Welcome.html\">Amazon Cognito Identity service</a>.</p> <p>If you want to use Cognito Sync in an Android or iOS application, you will probably want to make API calls via the AWS Mobile SDK. To learn more, see the <a href=\"http://docs.aws.amazon.com/mobile/sdkforandroid/developerguide/cognito-sync.html\">Developer Guide for Android</a> and the <a href=\"http://docs.aws.amazon.com/mobile/sdkforios/developerguide/cognito-sync.html\">Developer Guide for iOS</a>.</p>",
+    "description": "Amazon Cognito Sync Amazon Cognito Sync provides an AWS service and client\nlibrary that enable cross-device syncing of application-related user data.\nHigh-level client libraries are available for both iOS and Android. You can use\nthese libraries to persist data locally so that it's available even if the\ndevice is offline. Developer credentials don't need to be stored on the mobile\ndevice to access the service. You can use Amazon Cognito to obtain a normalized\nuser ID and credentials. User data is persisted in a dataset that can store up\nto 1 MB of key-value pairs, and you can have up to 20 datasets per user\nidentity.\n\nWith Amazon Cognito Sync, the data stored for each identity is accessible only\nto credentials assigned to that identity. In order to use the Cognito Sync\nservice, you need to make API calls using credentials retrieved with Amazon\nCognito Identity service\n[http://docs.aws.amazon.com/cognitoidentity/latest/APIReference/Welcome.html].\n\nIf you want to use Cognito Sync in an Android or iOS application, you will\nprobably want to make API calls via the AWS Mobile SDK. To learn more, see the \nDeveloper Guide for Android\n[http://docs.aws.amazon.com/mobile/sdkforandroid/developerguide/cognito-sync.html] \nand the Developer Guide for iOS\n[http://docs.aws.amazon.com/mobile/sdkforios/developerguide/cognito-sync.html].",
     "docsUrl": "https://aws.amazon.com/cognito-sync/",
     "url": "https://api.apis.guru/v2/specs/amazonaws.com/cognito-sync/2014-06-30/swagger.json",
     "envVars": {},
@@ -20,7 +20,7 @@
                 "label": "Custom Server URL",
                 "viewClass": "TextFieldView"
             },
-            "hmac": {
+            "auth_hmac": {
                 "label": "Authorization (hmac)",
                 "viewClass": "TextFieldView",
                 "note": "Amazon Signature authorization v4"
@@ -38,8 +38,8 @@
     "actions": {
         "ListIdentityPoolUsage": {
             "main": "./lib/actions/ListIdentityPoolUsage.js",
-            "title": "<p>Gets a list of identity pools registered with Cognito.</p> <p>ListIdentityPoolUsage can only be called with developer credentials. You cannot make this API call with the temporary user credentials provided by Cognito Identity.</p>",
-            "description": "<p>Gets a list of identity pools registered with Cognito.</p> <p>ListIdentityPoolUsage can only be called with developer credentials. You cannot make this API call with the temporary user credentials provided by Cognito Identity.</p>",
+            "title": "ListIdentityPoolUsage",
+            "description": "Gets a list of identity pools registered with Cognito.\n\nListIdentityPoolUsage can only be called with developer credentials. You cannot\nmake this API call with the temporary user credentials provided by Cognito\nIdentity.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -55,8 +55,8 @@
         },
         "DescribeIdentityPoolUsage": {
             "main": "./lib/actions/DescribeIdentityPoolUsage.js",
-            "title": "<p>Gets usage details (for example, data storage) about a particular identity pool.</p> <p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>",
-            "description": "<p>Gets usage details (for example, data storage) about a particular identity pool.</p> <p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>",
+            "title": "DescribeIdentityPoolUsage",
+            "description": "Gets usage details (for example, data storage) about a particular identity pool.\n\nThis API can only be called with developer credentials. You cannot call this API\nwith the temporary user credentials provided by Cognito Identity.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -72,8 +72,8 @@
         },
         "BulkPublish": {
             "main": "./lib/actions/BulkPublish.js",
-            "title": "<p>Initiates a bulk publish of all existing datasets for an Identity Pool to the configured stream. Customers are limited to one successful bulk publish per 24 hours. Bulk publish is an asynchronous request, customers can see the status of the request via the GetBulkPublishDetails operation.</p> <p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>",
-            "description": "<p>Initiates a bulk publish of all existing datasets for an Identity Pool to the configured stream. Customers are limited to one successful bulk publish per 24 hours. Bulk publish is an asynchronous request, customers can see the status of the request via the GetBulkPublishDetails operation.</p> <p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>",
+            "title": "BulkPublish",
+            "description": "Initiates a bulk publish of all existing datasets for an Identity Pool to the\nconfigured stream. Customers are limited to one successful bulk publish per 24\nhours. Bulk publish is an asynchronous request, customers can see the status of\nthe request via the GetBulkPublishDetails operation.\n\nThis API can only be called with developer credentials. You cannot call this API\nwith the temporary user credentials provided by Cognito Identity.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -89,8 +89,8 @@
         },
         "GetIdentityPoolConfiguration": {
             "main": "./lib/actions/GetIdentityPoolConfiguration.js",
-            "title": "<p>Gets the configuration settings of an identity pool.</p> <p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>",
-            "description": "<p>Gets the configuration settings of an identity pool.</p> <p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>",
+            "title": "GetIdentityPoolConfiguration",
+            "description": "Gets the configuration settings of an identity pool.\n\nThis API can only be called with developer credentials. You cannot call this API\nwith the temporary user credentials provided by Cognito Identity.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -106,8 +106,8 @@
         },
         "SetIdentityPoolConfiguration": {
             "main": "./lib/actions/SetIdentityPoolConfiguration.js",
-            "title": "<p>Sets the necessary configuration for push sync.</p> <p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>",
-            "description": "<p>Sets the necessary configuration for push sync.</p> <p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>",
+            "title": "SetIdentityPoolConfiguration",
+            "description": "Sets the necessary configuration for push sync.\n\nThis API can only be called with developer credentials. You cannot call this API\nwith the temporary user credentials provided by Cognito Identity.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -123,8 +123,8 @@
         },
         "GetCognitoEvents": {
             "main": "./lib/actions/GetCognitoEvents.js",
-            "title": "<p>Gets the events and the corresponding Lambda functions associated with an identity pool.</p> <p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>",
-            "description": "<p>Gets the events and the corresponding Lambda functions associated with an identity pool.</p> <p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>",
+            "title": "GetCognitoEvents",
+            "description": "Gets the events and the corresponding Lambda functions associated with an\nidentity pool.\n\nThis API can only be called with developer credentials. You cannot call this API\nwith the temporary user credentials provided by Cognito Identity.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -140,8 +140,8 @@
         },
         "SetCognitoEvents": {
             "main": "./lib/actions/SetCognitoEvents.js",
-            "title": "<p>Sets the AWS Lambda function for a given event type for an identity pool. This request only updates the key/value pair specified. Other key/values pairs are not updated. To remove a key value pair, pass a empty value for the particular key.</p> <p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>",
-            "description": "<p>Sets the AWS Lambda function for a given event type for an identity pool. This request only updates the key/value pair specified. Other key/values pairs are not updated. To remove a key value pair, pass a empty value for the particular key.</p> <p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>",
+            "title": "SetCognitoEvents",
+            "description": "Sets the AWS Lambda function for a given event type for an identity pool. This\nrequest only updates the key/value pair specified. Other key/values pairs are\nnot updated. To remove a key value pair, pass a empty value for the particular\nkey.\n\nThis API can only be called with developer credentials. You cannot call this API\nwith the temporary user credentials provided by Cognito Identity.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -157,8 +157,8 @@
         },
         "GetBulkPublishDetails": {
             "main": "./lib/actions/GetBulkPublishDetails.js",
-            "title": "<p>Get the status of the last BulkPublish operation for an identity pool.</p> <p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>",
-            "description": "<p>Get the status of the last BulkPublish operation for an identity pool.</p> <p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>",
+            "title": "GetBulkPublishDetails",
+            "description": "Get the status of the last BulkPublish operation for an identity pool.\n\nThis API can only be called with developer credentials. You cannot call this API\nwith the temporary user credentials provided by Cognito Identity.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -174,8 +174,8 @@
         },
         "DescribeIdentityUsage": {
             "main": "./lib/actions/DescribeIdentityUsage.js",
-            "title": "<p>Gets usage information for an identity, including number of datasets and data usage.</p> <p>This API can be called with temporary user credentials provided by Cognito Identity or with developer credentials.</p>",
-            "description": "<p>Gets usage information for an identity, including number of datasets and data usage.</p> <p>This API can be called with temporary user credentials provided by Cognito Identity or with developer credentials.</p>",
+            "title": "DescribeIdentityUsage",
+            "description": "Gets usage information for an identity, including number of datasets and data\nusage.\n\nThis API can be called with temporary user credentials provided by Cognito\nIdentity or with developer credentials.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -191,8 +191,8 @@
         },
         "ListDatasets": {
             "main": "./lib/actions/ListDatasets.js",
-            "title": "<p>Lists datasets for an identity. With Amazon Cognito Sync, each identity has access only to its own data. Thus, the credentials used to make this API call need to have access to the identity data.</p> <p>ListDatasets can be called with temporary user credentials provided by Cognito Identity or with developer credentials. You should use the Cognito Identity credentials to make this API call.</p>",
-            "description": "<p>Lists datasets for an identity. With Amazon Cognito Sync, each identity has access only to its own data. Thus, the credentials used to make this API call need to have access to the identity data.</p> <p>ListDatasets can be called with temporary user credentials provided by Cognito Identity or with developer credentials. You should use the Cognito Identity credentials to make this API call.</p>",
+            "title": "ListDatasets",
+            "description": "Lists datasets for an identity. With Amazon Cognito Sync, each identity has\naccess only to its own data. Thus, the credentials used to make this API call\nneed to have access to the identity data.\n\nListDatasets can be called with temporary user credentials provided by Cognito\nIdentity or with developer credentials. You should use the Cognito Identity\ncredentials to make this API call.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -208,8 +208,8 @@
         },
         "DeleteDataset": {
             "main": "./lib/actions/DeleteDataset.js",
-            "title": "<p>Deletes the specific dataset. The dataset will be deleted permanently, and the action can't be undone. Datasets that this dataset was merged with will no longer report the merge. Any subsequent operation on this dataset will result in a ResourceNotFoundException.</p> <p>This API can be called with temporary user credentials provided by Cognito Identity or with developer credentials.</p>",
-            "description": "<p>Deletes the specific dataset. The dataset will be deleted permanently, and the action can't be undone. Datasets that this dataset was merged with will no longer report the merge. Any subsequent operation on this dataset will result in a ResourceNotFoundException.</p> <p>This API can be called with temporary user credentials provided by Cognito Identity or with developer credentials.</p>",
+            "title": "DeleteDataset",
+            "description": "Deletes the specific dataset. The dataset will be deleted permanently, and the\naction can't be undone. Datasets that this dataset was merged with will no\nlonger report the merge. Any subsequent operation on this dataset will result in\na ResourceNotFoundException.\n\nThis API can be called with temporary user credentials provided by Cognito\nIdentity or with developer credentials.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -225,8 +225,8 @@
         },
         "DescribeDataset": {
             "main": "./lib/actions/DescribeDataset.js",
-            "title": "<p>Gets meta data about a dataset by identity and dataset name. With Amazon Cognito Sync, each identity has access only to its own data. Thus, the credentials used to make this API call need to have access to the identity data.</p> <p>This API can be called with temporary user credentials provided by Cognito Identity or with developer credentials. You should use Cognito Identity credentials to make this API call.</p>",
-            "description": "<p>Gets meta data about a dataset by identity and dataset name. With Amazon Cognito Sync, each identity has access only to its own data. Thus, the credentials used to make this API call need to have access to the identity data.</p> <p>This API can be called with temporary user credentials provided by Cognito Identity or with developer credentials. You should use Cognito Identity credentials to make this API call.</p>",
+            "title": "DescribeDataset",
+            "description": "Gets meta data about a dataset by identity and dataset name. With Amazon Cognito\nSync, each identity has access only to its own data. Thus, the credentials used\nto make this API call need to have access to the identity data.\n\nThis API can be called with temporary user credentials provided by Cognito\nIdentity or with developer credentials. You should use Cognito Identity\ncredentials to make this API call.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -242,8 +242,8 @@
         },
         "UpdateRecords": {
             "main": "./lib/actions/UpdateRecords.js",
-            "title": "<p>Posts updates to records and adds and deletes records for a dataset and user.</p> <p>The sync count in the record patch is your last known sync count for that record. The server will reject an UpdateRecords request with a ResourceConflictException if you try to patch a record with a new value but a stale sync count.</p> <p>For example, if the sync count on the server is 5 for a key called highScore and you try and submit a new highScore with sync count of 4, the request will be rejected. To obtain the current sync count for a record, call ListRecords. On a successful update of the record, the response returns the new sync count for that record. You should present that sync count the next time you try to update that same record. When the record does not exist, specify the sync count as 0.</p> <p>This API can be called with temporary user credentials provided by Cognito Identity or with developer credentials.</p>",
-            "description": "<p>Posts updates to records and adds and deletes records for a dataset and user.</p> <p>The sync count in the record patch is your last known sync count for that record. The server will reject an UpdateRecords request with a ResourceConflictException if you try to patch a record with a new value but a stale sync count.</p> <p>For example, if the sync count on the server is 5 for a key called highScore and you try and submit a new highScore with sync count of 4, the request will be rejected. To obtain the current sync count for a record, call ListRecords. On a successful update of the record, the response returns the new sync count for that record. You should present that sync count the next time you try to update that same record. When the record does not exist, specify the sync count as 0.</p> <p>This API can be called with temporary user credentials provided by Cognito Identity or with developer credentials.</p>",
+            "title": "UpdateRecords",
+            "description": "Posts updates to records and adds and deletes records for a dataset and user.\n\nThe sync count in the record patch is your last known sync count for that\nrecord. The server will reject an UpdateRecords request with a\nResourceConflictException if you try to patch a record with a new value but a\nstale sync count.\n\nFor example, if the sync count on the server is 5 for a key called highScore and\nyou try and submit a new highScore with sync count of 4, the request will be\nrejected. To obtain the current sync count for a record, call ListRecords. On a\nsuccessful update of the record, the response returns the new sync count for\nthat record. You should present that sync count the next time you try to update\nthat same record. When the record does not exist, specify the sync count as 0.\n\nThis API can be called with temporary user credentials provided by Cognito\nIdentity or with developer credentials.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -259,8 +259,8 @@
         },
         "ListRecords": {
             "main": "./lib/actions/ListRecords.js",
-            "title": "<p>Gets paginated records, optionally changed after a particular sync count for a dataset and identity. With Amazon Cognito Sync, each identity has access only to its own data. Thus, the credentials used to make this API call need to have access to the identity data.</p> <p>ListRecords can be called with temporary user credentials provided by Cognito Identity or with developer credentials. You should use Cognito Identity credentials to make this API call.</p>",
-            "description": "<p>Gets paginated records, optionally changed after a particular sync count for a dataset and identity. With Amazon Cognito Sync, each identity has access only to its own data. Thus, the credentials used to make this API call need to have access to the identity data.</p> <p>ListRecords can be called with temporary user credentials provided by Cognito Identity or with developer credentials. You should use Cognito Identity credentials to make this API call.</p>",
+            "title": "ListRecords",
+            "description": "Gets paginated records, optionally changed after a particular sync count for a\ndataset and identity. With Amazon Cognito Sync, each identity has access only to\nits own data. Thus, the credentials used to make this API call need to have\naccess to the identity data.\n\nListRecords can be called with temporary user credentials provided by Cognito\nIdentity or with developer credentials. You should use Cognito Identity\ncredentials to make this API call.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -276,8 +276,8 @@
         },
         "UnsubscribeFromDataset": {
             "main": "./lib/actions/UnsubscribeFromDataset.js",
-            "title": "<p>Unsubscribes from receiving notifications when a dataset is modified by another device.</p> <p>This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with developer credentials.</p>",
-            "description": "<p>Unsubscribes from receiving notifications when a dataset is modified by another device.</p> <p>This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with developer credentials.</p>",
+            "title": "UnsubscribeFromDataset",
+            "description": "Unsubscribes from receiving notifications when a dataset is modified by another\ndevice.\n\nThis API can only be called with temporary credentials provided by Cognito\nIdentity. You cannot call this API with developer credentials.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -293,8 +293,8 @@
         },
         "SubscribeToDataset": {
             "main": "./lib/actions/SubscribeToDataset.js",
-            "title": "<p>Subscribes to receive notifications when a dataset is modified by another device.</p> <p>This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with developer credentials.</p>",
-            "description": "<p>Subscribes to receive notifications when a dataset is modified by another device.</p> <p>This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with developer credentials.</p>",
+            "title": "SubscribeToDataset",
+            "description": "Subscribes to receive notifications when a dataset is modified by another\ndevice.\n\nThis API can only be called with temporary credentials provided by Cognito\nIdentity. You cannot call this API with developer credentials.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -310,8 +310,8 @@
         },
         "RegisterDevice": {
             "main": "./lib/actions/RegisterDevice.js",
-            "title": "<p>Registers a device to receive push sync notifications.</p> <p>This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with developer credentials.</p>",
-            "description": "<p>Registers a device to receive push sync notifications.</p> <p>This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with developer credentials.</p>",
+            "title": "RegisterDevice",
+            "description": "Registers a device to receive push sync notifications.\n\nThis API can only be called with temporary credentials provided by Cognito\nIdentity. You cannot call this API with developer credentials.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
